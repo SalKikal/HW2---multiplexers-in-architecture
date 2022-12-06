@@ -1,12 +1,13 @@
 module flags(
-	input Upd_flags,
-	input [3:0] N_flags,
-	output reg [3:0] O_flags, 
-                output reg Carry
+	input update_flags,
+	input [3:0] new_flags,
+	output reg [3:0] current_flags
 );
 
-always @(posedge Upd_flags) begin
-	O_flags = N_flags;
+initial current_flags = 0;
+
+always @(posedge update_flags) begin
+	current_flags = new_flags;
 end
 
 endmodule

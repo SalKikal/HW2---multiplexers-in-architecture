@@ -1,9 +1,8 @@
 module PCinc(
-	input clock,
-	input [31:0] O_addr,
-	output [31:0] N_addr
+	input [31:0] old_address,
+	output [31:0] new_address
 );
 
-assign N_addr = O_addr + 1;
+assign new_address = old_address + 4;
 
 endmodule

@@ -1,6 +1,6 @@
 module ALU_test();
 
-logic clock;
+logic clk;
 logic [31:0] src1, src2, Rd_out;
 logic [7:0] ctrl_cmd;
 logic [3:0] new_flags, current_flags;
@@ -8,11 +8,11 @@ logic [3:0] new_flags, current_flags;
 ALU ALU_tst(src1, src2, Rd_out, ctrl_cmd, new_flags, current_flags);
 
 always begin 
- #1 clock = ~clock;
+ #1 clk = ~clk;
 end
 
 initial begin
-	clock = 0;
+	clk = 0;
 	src1 = 194;
 	src2 = 204;
 	ctrl_cmd[7:6] = 2'b00;

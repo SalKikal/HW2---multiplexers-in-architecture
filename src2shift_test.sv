@@ -1,6 +1,6 @@
 module src2shift_test();
 
-logic clock;
+logic clk;
 logic [31:0] in_data, out_data;
 logic [4:0] amt;
 logic [31:0] Rs, Rm, src2;
@@ -10,11 +10,11 @@ rot_right rot_right_tst(in_data, amt, out_data);
 src2shift src2shift_tst(Rs, Rm, imm, src2);
 
 always begin 
- #1 clock = ~clock;
+ #1 clk = ~clk;
 end
 
 initial begin
-	clock = 0;
+	clk = 0;
 	in_data = 32'hF0F0;
 	amt = 3;
 	imm = 0;

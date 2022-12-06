@@ -3,7 +3,7 @@ module MyAdder
 #(
     parameter bitwidth = 32
 )(
-    //input clock,
+    //input clk,
     input [bitwidth-1:0] A, B,
     output [bitwidth-1:0] S,
     output Cout
